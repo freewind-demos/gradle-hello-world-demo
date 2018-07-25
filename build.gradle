@@ -16,7 +16,7 @@ buildscript {
 
 apply plugin: 'java'
 
-compileJava   {
+compileJava {
     sourceCompatibility = '1.8'
     targetCompatibility = '1.8'
 }
@@ -30,7 +30,8 @@ repositories {
 }
 
 dependencies {
-    compile 'com.google.guava:guava:25.1-jre'
+    compile 'org.apache.commons:commons-lang3:3.4'
+    compile 'freewind.github:lost-list-creator:0.1.0'
     testCompile 'junit:junit:4.11'
     testCompile 'org.easytesting:fest-assert-core:2.0M10'
 }

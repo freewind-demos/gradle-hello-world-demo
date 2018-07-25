@@ -3,3 +3,4 @@
 /gradle-test.*
 .gradle/
 local.properties
+out/
