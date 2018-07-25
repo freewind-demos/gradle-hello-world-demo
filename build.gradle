@@ -1,3 +1,19 @@
+buildscript {
+    ext.kotlin_version = '1.2.51'
+    repositories {
+        mavenLocal()
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
+        jcenter()
+        maven { url("https://plugins.gradle.org/m2/") }
+        maven { url 'https://dl.bintray.com/freewind/maven/' }
+    }
+    dependencies {
+//        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+//        classpath 'freewind.github.com:gradle-kotlin-js-bundler-plugin:0.1.0'
+    }
+}
+
 apply plugin: 'java'
 
 repositories {
@@ -5,10 +21,11 @@ repositories {
     maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
     maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
     jcenter()
+    maven { url 'https://dl.bintray.com/freewind/maven/' }
 }
 
 dependencies {
-    compile 'org.apache.commons:commons-lang3:3.4'
+    compile 'com.google.guava:guava:25.1-jre'
     testCompile 'junit:junit:4.11'
     testCompile 'org.easytesting:fest-assert-core:2.0M10'
 }
